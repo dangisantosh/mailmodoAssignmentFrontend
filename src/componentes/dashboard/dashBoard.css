@@ -1,0 +1,32 @@
+.navbar{
+    height: 25px;
+    width: 100%;
+    background-color: aqua;
+}
+.input_field{
+   height: 40vh;
+   width: 75%; 
+}
+
+.middle_section{
+    height: 25px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.btn{
+    border-radius: 0;
+    padding: 2px;
+}
+
+.bottom_section{
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+}
+
+.play_btn{
+    margin-left: 3px;
+    align-items: center;
+    border-radius: 2px;
+    padding: 3px;
+}
