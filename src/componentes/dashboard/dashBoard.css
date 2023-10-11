@@ -1,32 +1,72 @@
 .navbar{
     height: 25px;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(218, 244, 244);
+}
+.top_section{
+    display: grid;
+    grid-template-columns: 75% 25%; 
 }
 .input_field{
    height: 40vh;
-   width: 75%; 
+   width: 100%; 
 }
 
 .middle_section{
     height: 25px;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(242, 247, 247);
 }
 
-.btn{
+/* .btn{
     border-radius: 0;
     padding: 2px;
-}
+    cursor: pointer;
+    display: inline-block;
+} */
 
 .bottom_section{
     display: grid;
+    height: 20vh;
     grid-template-columns: 49% 2% 49%;
 }
 
 .play_btn{
-    margin-left: 3px;
+    margin-left: 1px;
     align-items: center;
     border-radius: 2px;
     padding: 3px;
+    cursor: pointer;
+    transition: all ease-in-out 0.1s;
 }
+
+.btn{
+    
+    padding: 2px;
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+    margin: 0.5px;
+  }
+  .btn:hover{
+    border: 1px solid #888;
+    background-color: #ddd;
+  }
+
+  .sample_doc{
+    margin-left: 5px;
+    border: 1px solid rgb(56, 55, 55);
+    padding: 3px;
+  }
+
+  .sample_heading{
+    display: flex;
+    justify-content: center;
+  }
+
+  .inner_sample_doc{
+    border: 2px solid black;
+    height: 85%;
+    padding: 3px;
+    border-radius: 6px;
+    
+  }
