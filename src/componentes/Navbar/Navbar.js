@@ -7,11 +7,11 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
   return (
     <div className='navbar_top'>
-        <span style={{fontWeight:"800", fontSize:"20px", marginLeft:"3px"}}>Database Query Manager</span>
-      <a href="https://drive.google.com/file/d/1Z244REojL6bvnhxkfYhQA6_ClSkannBe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-     
-      <FontAwesomeIcon icon={faFilePdf} />
-
+        <span style={{fontWeight:"800", fontSize:"20px", marginLeft:"3px"}}>Database Query Manager: MongoDB</span>
+      <a href="https://drive.google.com/file/d/10Dw_yfjJRAEyS3UNKkFgGRapkY2xT8Tj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+      <span style={{marginRight:"3px"}}>Sample Queries</span>
+      <FontAwesomeIcon icon={faFilePdf} style={{marginRight:"20px"}}/>
+      
       </a>
       
     </div>

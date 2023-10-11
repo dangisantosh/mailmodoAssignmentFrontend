@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
 import axios from 'axios';
-import {JSONEditor} from '@json-editor/json-editor'
+
 import Items  from '../Items/Items';
 import { useState  } from 'react';
 import "./dashBoard.css"
@@ -15,7 +15,7 @@ const DashBoard = () => {
   const [error1, setError1] = useState(null)
   const [data, setData] = useState([]);
  
-  const baseUrl = process.env.BASE_URL
+  
   const queryStringify = (str)=>{
     const regex = /\$[A-Za-z_][A-Za-z0-9_]*:/g;
     if(str.match(regex))
@@ -26,29 +26,36 @@ const DashBoard = () => {
   const handlePlayButtonClick = async () => {
     let query = document.getElementById('w3review').value;
     let query1;
-    
+    // console.log(query)
+    if(!query || query?.length === 0){
+      alert("Invalid Query")
+    }
     try {
      query1 = queryStringify(query)
     } catch (error) {
       alert("Invalid Query")
     }
-
+    
     if(!query1){
       alert("Invalid Query")
     }
     // const queryJSONString = JSON.string( query);
     try {
-      const response = await axios.post(`${baseUrl}/api/database/mongodb`,  {query: query1}   );
+      const response = await axios.post(`https://frantic-clam-sweatsuit.cyclic.app/api/database/mongodb`,  {query: query1}   );
       const responseData = response.data;
       // const dataArray = Array.isArray(responseData) ? responseData : [responseData];
       console.log(responseData)
       setData(responseData);
-      if(response.success == "false"){
+      if(response.success === "false"){
         setError1(response.message)
       } // Set the data in your state
     } catch (error) {
       console.error('Error sending data to the backend:', error);
-      alert("Invalid Query")
+      alert("Invalid Request")
+      setShowRaw(null);
+      setShowItems(true);
+      setData([]);
+      
       
     }
   }

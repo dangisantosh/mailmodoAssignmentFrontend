@@ -39,7 +39,7 @@ const Items = ({ data, onItemClick }) => {
         <thead>
           <tr>
             <th style={{ width: "50%", border: "0.25px solid black" }}>ID</th>
-            <th style={{ border: "0.25px solid #000" }}>Partition Key</th>
+            <th style={{ border: "0.25px solid #000" }}>Movie Name</th>
           </tr>
         </thead>
         <tbody id="data">
